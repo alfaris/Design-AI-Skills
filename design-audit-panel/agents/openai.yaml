@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Audit Panel"
+  short_description: "Audit designs through focused expert perspectives"
+  default_prompt: "Use $design-audit-panel to audit this design and prioritize the most important fixes."

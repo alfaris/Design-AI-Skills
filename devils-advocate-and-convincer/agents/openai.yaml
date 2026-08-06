@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devil's Advocate + Convincer"
+  short_description: "Pressure-test ideas and prepare persuasive responses"
+  default_prompt: "Use $devils-advocate-and-convincer to pressure-test this idea and prepare responses for a skeptical audience."

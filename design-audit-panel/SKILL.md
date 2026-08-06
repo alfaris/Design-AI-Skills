@@ -1,102 +1,105 @@
 ---
 name: design-audit-panel
-description: Audit a design, product concept, feature set, user flow, or UI from up to seven expert perspectives — Stakeholder (business/CRO), Frustrated User (UX friction), Developer (technical feasibility), Competitor (market positioning), A11y Expert (WCAG), UI/UX Expert (visual/IA), and Growth Marketing (AARRR/virality). Each persona returns a five-section report (Critical Issues, Warnings, What's Working Well, Opportunities, Plan), assembled into one combined deliverable with an executive summary. Use whenever the user wants a design review, design critique, UX audit, accessibility audit, product critique, "tear apart my design", "poke holes in this UI", "review this flow", "audit this feature", "what's wrong with this screen", red-team a product, or expert feedback on screenshots, Figma files, or written specs — even if they don't name the personas. Trigger any time someone hands over a design, mockup, prototype, flow, or concept and wants critical multi-angle feedback before building or shipping.
+description: Audit a design, product concept, feature, user flow, or UI through expert business, usability, engineering, competitive, accessibility, UI/UX, and growth perspectives. Use for design reviews, UX critiques, accessibility audits, product critiques, red-team reviews, screenshots, Figma designs, prototypes, or written specifications when the user wants prioritized findings and an action plan.
 ---
 
 # Design Audit Panel
 
-Audit a design or product concept through up to seven expert lenses, then assemble the reports into a
-single deliverable with an executive summary on top.
+Audit the provided design through selected expert perspectives, then combine the findings into one prioritized deliverable.
 
-The full persona prompts live in `references/personas.md`. Read that file before producing any report —
-each persona has a deliberate attitude and a fixed five-section output structure that must be preserved
-exactly.
+Read `references/personas.md` before writing a report. Use only the persona blocks selected for the audit and preserve each persona's five-section sequence.
 
-## The seven personas
+## Perspectives
 
-| # | Persona | Lens |
-|---|---------|------|
-| 1 | 📊 Stakeholder | Business viability, monetization, conversion (CRO) |
-| 2 | 😤 Frustrated User | Real-world UX friction, impatience, rage-quit moments |
-| 3 | 🛠 Developer | Technical feasibility, architecture, maintainability |
-| 4 | 🦊 Competitor | Market positioning, parity gaps, defensibility |
-| 5 | ♿ A11y Expert | Accessibility, WCAG 2.2 compliance, inclusive design |
-| 6 | 😍 UI/UX Expert | Visual hierarchy, design systems, information architecture |
-| 7 | 🚀 Growth Marketing | AARRR funnel, virality, activation, data loops |
+| Perspective | Primary lens |
+| --- | --- |
+| Stakeholder | Business viability, monetization, and conversion |
+| Frustrated User | Real-world friction, clarity, and effort |
+| Developer | Feasibility, architecture, and maintainability |
+| Competitor | Positioning, parity, and defensibility |
+| Accessibility Expert | WCAG 2.2 and inclusive design |
+| UI/UX Expert | Hierarchy, interaction, design systems, and information architecture |
+| Growth Marketing | Acquisition, activation, retention, referral, and revenue |
+
+## Language
+
+- Write the complete deliverable in the language used by the user unless they explicitly request another language.
+- Keep product names, technical terms, and standards in their established form when translation would reduce clarity.
+- For Arabic output, use clear Modern Standard Arabic and translate report headings consistently while preserving the required section order and meaning.
+- Do not ask the user to choose a language when their request already makes it clear.
 
 ## Workflow
 
-### Step 1 — Confirm which personas to run
+### 1. Select the perspectives
 
-The default is **user picks per run**. If the user already named the personas (e.g. "run the developer
-and a11y lenses"), proceed with those. If they just said something like "audit this design," present the
-seven options and ask which they want — offer "all seven" as an easy choice. Don't run all seven silently
-unless asked.
+Use the perspectives named by the user. If none are named:
 
-### Step 2 — Gather the design context
+- For a general UI or flow review, use the Frustrated User, Accessibility Expert, and UI/UX Expert as the default core panel.
+- For a business, growth, engineering, or competitive request, select the perspectives that directly match the stated goal.
+- Run all seven only when the user requests a comprehensive review or explicitly asks for every perspective.
 
-Look at what was provided: screenshots/images, a Figma link or file, a written spec, or a mix. Read or
-view the material thoroughly before auditing.
+State the selected perspectives in one short line. Ask a selection question only when two plausible panels would produce materially different results and the user's goal does not resolve the choice.
 
-The personas reference business stage, product type, and target audience. **If those are unclear from the
-input, ask before auditing** — a one-line clarification ("What's the product, who's it for, and what
-stage is it at?") sharpens every persona's output. If the context is obvious from the material, infer it
-and state your assumption rather than stalling.
+### 2. Inspect the evidence
 
-- For **Figma links**, use the Figma tools if connected; otherwise ask the user to export screenshots.
-- For **images**, view them directly.
-- For **written specs**, read the full text.
+Review every supplied screenshot, design file, link, flow, and written requirement before auditing.
 
-### Step 3 — Run each selected persona
+- Use a connected Figma tool when one is available and authorized.
+- If a Figma or external link cannot be opened, say so and request screenshots or a concise description. Never imply that an inaccessible design was inspected.
+- View attached images directly when the environment supports them.
+- Distinguish observed evidence from inferred context. Label important assumptions.
 
-For each persona the user chose, read its block in `references/personas.md`, fully adopt that persona, and
-produce its report in the exact five-section structure. Do not soften the persona's attitude — the
-Frustrated User should be genuinely impatient, the Competitor genuinely cutthroat, the Developer genuinely
-conservative. Ground every finding in the actual design provided; never invent screens or features that
-aren't there. If a persona has little to say about the given material, a shorter honest report beats
-padding.
+Infer product type, audience, and stage when the evidence makes them reasonably clear. If a missing detail would change the audit materially, ask one compact question covering the product, audience, and stage. Do not request information that can be derived from the supplied material.
 
-### Step 4 — Build the executive summary
+### 3. Run each persona
 
-After all selected reports exist, write an executive summary that contains all three of:
+Read the relevant blocks in `references/personas.md`, adopt each lens, and produce one report per selected perspective.
 
-1. **Cross-persona synthesis** — your own read of the themes that recur across lenses (e.g. "three of the
-   four personas flagged the signup flow"). This is the highest-value part.
-2. **Top issues ranked across all personas** — a single prioritized list of the most severe findings
-   pulled from every persona's Critical Issues, deduplicated and ordered by impact.
-3. **Consolidated action plan** — the section-5 plans from each persona, stitched together so the user has
-   one place to see every recommended next step.
+- Preserve the five-section sequence: Critical Issues, Warnings, What's Working Well, Opportunities, and the persona-specific Plan.
+- Ground every finding in visible or described evidence.
+- Identify the affected screen, step, component, or requirement whenever possible.
+- Separate confirmed accessibility failures from risks that require implementation or contrast inspection to verify.
+- Keep persona voices distinct without using insults, stereotypes, or theatrical filler.
+- Prefer a short, specific report over invented or repetitive findings.
 
-Place the executive summary at the **top** of the combined deliverable, before the individual reports.
+### 4. Synthesize the audit
 
-### Step 5 — Deliver in the chosen format
+Place an executive summary before the persona reports. Include:
 
-Format is **decided per run**. If the user hasn't said, ask: Markdown, Word (.docx), or PDF. Then:
+1. **Cross-perspective synthesis**: recurring themes, meaningful disagreements, and the overall readiness verdict. Omit comparison language when only one perspective runs.
+2. **Top issues**: deduplicated findings ranked by user impact, business impact, accessibility severity, and implementation urgency.
+3. **Consolidated action plan**: immediate fixes, next iteration work, and validation steps combined across the selected perspectives.
 
-- **Markdown** → create a `.md` file (use the `md`/`docx` skill conventions only if relevant; a clean
-  markdown file is usually enough).
-- **Word (.docx)** → use the **docx skill** (`/mnt/skills/public/docx/SKILL.md`).
-- **PDF** → use the **pdf skill** (`/mnt/skills/public/pdf/SKILL.md`).
+Do not rank cosmetic preferences above task blockers, accessibility barriers, data loss, broken flows, or misleading behavior.
 
-Structure of the combined document:
+### 5. Deliver in an available format
 
-```
-# Design Audit — [Product Name]
+Default to readable inline Markdown when the user does not request a file type.
+
+- For Markdown, respond inline or create a `.md` file when the user asks for a downloadable artifact.
+- For Word or PDF, use an available platform-native document tool or skill.
+- If the requested file capability is unavailable, provide the complete report in Markdown and add one brief note explaining the fallback.
+- When creating a file, use the writable output location and file-sharing mechanism provided by the current platform. Never assume a fixed filesystem path or tool name.
+- Avoid wide tables for long findings. Use stacked sections when the user is on mobile or when table cells would become difficult to scan.
+
+Use this document order:
+
+```text
+# Design Audit - [Product Name]
 ## Executive Summary
-   - Cross-persona synthesis
-   - Top issues ranked across all personas
-   - Consolidated action plan
-## 📊 Stakeholder Report          (if selected)
-## 😤 Frustrated User Report       (if selected)
-... one section per selected persona ...
+## Top Issues
+## Consolidated Action Plan
+## [Perspective] Report
+...one report per selected perspective...
 ```
 
-Save the final file to `/mnt/user-data/outputs/` and present it with `present_files`.
+## Quality checks
 
-## Notes
+Before delivering:
 
-- Keep each persona's voice distinct; the value of the panel is the contrast between lenses.
-- When only one persona is selected, skip the cross-persona synthesis (nothing to compare) but still
-  provide the ranked issues and action plan, and inline delivery is fine unless a file is requested.
-- The personas can disagree with each other — that's expected and useful. Surface the tension in the
-  synthesis rather than papering over it.
+- Confirm every critical issue points to supplied evidence.
+- Remove duplicate findings across perspectives from the executive summary.
+- Make recommendations concrete enough to assign and verify.
+- Preserve useful strengths, not only faults.
+- Check that the result matches the user's language and requested format.
+- Clearly disclose inaccessible sources, unsupported tools, and material assumptions.
