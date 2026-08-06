@@ -1,47 +1,69 @@
-# Design AI Skills by Faris
 
-Two [Claude Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) — reusable instruction sets that give Claude a structured expert framework for a specific kind of work. Drop a folder into Claude and it knows how to run the process below.
+# Design AI Skills by Faris — تصميم مهارات ذكاء اصطناعي بواسطة فارس
 
-## What's inside
+![Thumbnail](assets/thumbnail.svg "Design AI Skills by Faris")
 
-### 🎨 `design-audit-panel/`
-Audits a design, product concept, feature set, or UI from up to seven expert perspectives — Stakeholder, Frustrated User, Developer, Competitor, A11y Expert, UI/UX Expert, and Growth Marketing. Each persona returns Critical Issues, Warnings, What's Working, Opportunities, and a Plan — assembled into one report with an executive summary.
-
-**Use it for:** design reviews, UX audits, "tear apart my design," red-teaming a product before you build or ship it.
-
-### 🥊 `devils-advocate-and-convincer/`
-A two-phase framework: first attacks an idea with every realistic objection a skeptical panel would raise, then converts each objection into a persuasive, audience-calibrated response — capped with a presentation-ready pitch.
-
-**Use it for:** pitches, negotiations, stress-testing a business idea, prepping for a hard conversation with investors, clients, or your boss.
-
-## How to use these
-
-**Claude.ai / Claude apps (Skills feature):**
-1. Download this repo (or just the folder you want) as a zip.
-2. In Claude, go to Settings → Capabilities → Skills, and upload the folder.
-3. Ask Claude to do the thing the skill covers (e.g. "review this UI" or "poke holes in this pitch") — Claude will pick up the skill automatically.
-
-**Claude Code / Cowork:**
-Drop the folder into your skills directory (typically `/mnt/skills/user/` or your project's `.claude/skills/`), and Claude will surface it the same way.
-
-## Structure
-
-```
-claude-skills/
-├── design-audit-panel/
-│   ├── SKILL.md
-│   └── references/
-│       └── personas.md
-└── devils-advocate-and-convincer/
-    └── SKILL.md
-```
-
-## License
-
-CC BY 4.0 — use these, remix them, teach with them, just credit Ahmed Faris (فارس المجرة) as the original source. See [LICENSE](./LICENSE) for the full text.
+Short: Two ready-to-use Claude Skills you can drop into Claude Skills or upload in Settings → Capabilities → Skills.
 
 ---
-Built and shared by **Ahmed Faris** — فارس المجرة
-🌐 [afaris.me](https://afaris.me)
-📷 Instagram: [ADD_HANDLE]
-🎥 [ADD_OTHER_PLATFORM]
+
+## Quickstart
+
+1. Download this repo or the specific skill folder you want.
+2. In Claude: Settings → Capabilities → Skills → Upload folder.
+3. Paste one of the "Paste-ready prompt" examples below and run the skill.
+
+---
+
+## Skills (English)
+
+- design-audit-panel — multi-persona design & UX audit. Paste-ready prompt example:
+
+```
+Audit this design: [PASTE DESIGN DESCRIPTION, IMAGE, OR FIGMA LINK]
+Run personas: Stakeholder, Frustrated User, Developer
+Output: Markdown with an executive summary and separate persona reports.
+```
+or just use the skill by /design-audit-panel
+
+- devils-advocate-and-convincer — pressure-test an idea, then craft persuasive responses and a pitch. Paste-ready prompt example:
+
+```
+Name: [PROJECT/IDEA NAME]
+What: [ONE-PARAGRAPH DESCRIPTION]
+Why: [VALUE PROPOSITION / WHY IT MATTERS]
+Audience: [WHO YOU'RE CONVINCING]
+Task: Run Devil's Advocate (objections) then Master Convincer (responses) and produce a 200–400 word presentation-ready pitch.
+```
+or just use the skill by /devils-advocate-and-convincer
+---
+
+## الاستخدام السهل — العربية
+
+- design-audit-panel — تدقيق التصميم من عدة وجهات نظر. مثال جاهز للصق:
+
+```
+راجع هذا التصميم: [أضف وصف التصميم أو رابط Figma أو صورة]
+شغّل الشخصيات: Stakeholder, Frustrated User, Developer
+المخرجات: Markdown مع ملخص تنفيذي وتقارير منفصلة لكل شخصية.
+```
+
+- devils-advocate-and-convincer — تحدَّ فكرتك ثم حضِّر ردودًا مقنعة وخطابًا جاهزًا. مثال جاهز للصق:
+
+```
+الاسم: [اسم المشروع]
+ما هو: [فقرة وصفية قصيرة]
+لماذا: [سبب القيمة]
+الجمهور: [من تريد إقناعه]
+المهمة: اكتب اعتراضات Devil's Advocate ثم ردود Master Convincer وانتهي بخطاب 200–400 كلمة جاهز للتقديم.
+```
+
+---
+
+## License / الترخيص
+
+CC BY 4.0 — use, remix, and share with credit to Ahmed Faris (فارس المجرة). See [LICENSE](./LICENSE).
+
+---
+
+Built and shared by Ahmed Faris — فارس المجرة · 🌐 https://afaris.me
