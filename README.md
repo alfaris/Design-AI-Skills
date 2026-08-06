@@ -1,6 +1,7 @@
 # Design AI Skills by Faris
 
-![Design AI Skills by Faris: two bilingual skills for design critique and persuasive thinking](assets/cover.svg)(assets/thumbnail.svg)
+![Design AI Skills by Faris: two bilingual skills for design critique and persuasive thinking](assets/cover.svg)
+![Design AI Skills by Faris Thumbnail](assets/thumbnail.svg)
 
 Two ready-to-use AI skills for people who design, present, and defend ideas. Use them with **Claude** or **Codex** in English or Arabic, with no coding required.
 
