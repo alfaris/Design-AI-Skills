@@ -8,6 +8,18 @@ All notable changes to this collection are documented here. The format follows [
 
 No changes yet. / لا توجد تغييرات بعد.
 
+## [0.9.1] - 2026-09-02
+
+### Added / تمت الإضافة
+
+- Portable installation guidance for generic `SKILL.md` consumers, `npx skills`, Claude-style local plugins, and Figma-connected workflows.
+- Repository contribution guidance and a standard-library skill metadata validator with focused regression tests.
+
+### Changed / تم التغيير
+
+- Clarified the evaluative and decision-support roles of the two skills.
+- Added evidence labels, severity guidance, context gates, and anti-fabrication rules while preserving English and Arabic behavior.
+
 ## [0.9.0] - 2026-08-06
 
 ### Added / تمت الإضافة
@@ -24,5 +36,6 @@ No changes yet. / لا توجد تغييرات بعد.
 - Clarified missing-context, inaccessible-design, mobile-layout, and output fallback behavior.
 - Replaced the oversized thumbnail with a lightweight, accessible SVG.
 
-[Unreleased]: https://github.com/alfaris/Design-AI-Skills-by-Faris/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/alfaris/Design-AI-Skills-by-Faris/compare/v0.9.1...HEAD
+[0.9.1]: https://github.com/alfaris/Design-AI-Skills-by-Faris/releases/tag/v0.9.1
 [0.9.0]: https://github.com/alfaris/Design-AI-Skills-by-Faris/releases/tag/v0.9.0

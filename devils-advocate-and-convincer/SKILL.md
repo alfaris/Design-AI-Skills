@@ -7,6 +7,8 @@ description: Pressure-test an idea by surfacing realistic objections, then turn 
 
 Stress-test an idea without softening the risks, then build credible responses for the specific audience the user needs to persuade.
 
+This is a **decision-support** skill. Its job is to improve the decision and the user's preparation, not to manufacture certainty or win through manipulation.
+
 ## Language
 
 - Write the complete response in the language used by the user unless they explicitly request another language.
@@ -18,10 +20,27 @@ Stress-test an idea without softening the risks, then build credible responses f
 
 Extract five inputs: **Name**, **What**, **Why**, **How**, and **Audience**.
 
+Also establish, when possible: **Decision**, **Stage**, **Reversibility**, **Evidence**, and **Audience authority**. A reversible experiment, an irreversible commitment, and a post-decision defense require different levels of scrutiny.
+
 - Proceed immediately when the user supplies enough context.
 - Infer minor gaps from the conversation and disclose the assumptions in one compact section.
 - If several audiences are plausible but their objections would differ materially, ask one focused question about who must be convinced and what decision they control.
 - If the idea is too vague to assess, ask for one paragraph describing the idea, intended audience, and desired decision. Do not make the user complete a long template.
+- Separate **facts**, **assumptions**, **hypotheses**, and **unknowns** before generating objections. Treat user-supplied claims as claims, not verified evidence, unless the user provides supporting material or a connected research capability verifies them.
+
+### Context gate
+
+Before the objection pass, write a compact context profile:
+
+```text
+Decision: [what must be decided]
+Stage: [exploration | proposal | commitment | retrospective]
+Reversibility: [easy | moderate | hard]
+Evidence quality: [strong | mixed | weak | absent]
+Audience authority: [decider | influencer | approver | affected party]
+```
+
+If a missing value changes the level of scrutiny, ask one focused question. Otherwise state the assumption and continue. Match the response pattern to the profile: use experiments for weak evidence and reversible choices, and demand stronger proof and explicit safeguards for hard-to-reverse commitments.
 
 ## Phase 1: Devil's Advocate
 
@@ -34,6 +53,19 @@ Surface specific objections across these categories:
 5. **Worst-case scenarios**: concrete failure modes, triggers, consequences, and early warning signs.
 
 Aim for two to four substantive objections per relevant category. State briefly when a category does not apply instead of padding it.
+
+Rate each objection as **Critical**, **Major**, or **Minor** using consequence, likelihood, and time to detect. A high-severity objection should identify the decision it could block and the cheapest test or mitigation that would reduce uncertainty.
+
+Use this compact shape for each objection:
+
+```text
+Severity: Critical | Major | Minor
+Category: [logical | practical | social | psychological | worst-case]
+Objection: [specific mechanism]
+Evidence status: [fact | assumption | hypothesis | unknown]
+Consequence: [what fails and for whom]
+Test or safeguard: [cheapest way to reduce the risk]
+```
 
 A substantive objection names a mechanism. Replace generic claims such as "this may cost too much" with the specific condition that makes the economics, timing, trust, or execution fail. Never invent facts, market data, regulations, named examples, or financial figures.
 
@@ -50,6 +82,8 @@ Respond to every objection with five elements:
 Choose from anchoring, framing, social proof, authority, scarcity, loss aversion, storytelling, contrast, reciprocity, commitment and consistency, or specificity and numbers. Use social proof or authority only when the user supplied evidence or when a connected research capability can verify the claim. Otherwise recommend the type of proof to gather.
 
 Do not disguise unresolved risk as certainty. The convincing response should become stronger by addressing the objection, not by dismissing it.
+
+When the audience lacks authority to make the decision, adapt the response toward the audience's actual role: influence, evidence gathering, sponsorship, or escalation. When evidence is weak, use a proof-gathering request or reversible pilot instead of social proof, authority, or invented numbers.
 
 ## Final narrative
 
@@ -93,3 +127,4 @@ Before delivering:
 - Keep the hostile analysis rigorous while keeping the final language professional.
 - Flag claims that need research instead of fabricating proof.
 - Confirm the final narrative is 200-400 words and matches the user's language.
+- Confirm every claim in the final narrative is supported by the earlier analysis, clearly marked as an assumption, or framed as a proposed test.

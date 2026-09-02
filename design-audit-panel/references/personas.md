@@ -8,6 +8,17 @@ Opportunities → Plan), which makes cross-persona synthesis clean.
 Run only the personas the user selected. Read the relevant block(s) below and produce one report per
 selected persona.
 
+## Shared quality rules
+
+Apply these rules to every persona without flattening the persona's distinct lens:
+
+- Label the basis of a material claim as **Observed**, **Inferred**, or **To verify**. Never present an inference as a confirmed defect.
+- Rate findings as **Critical** (blocks a core task, creates serious exclusion or loss, or makes shipping unsafe), **Major** (meaningful friction, risk, or quality debt that should be addressed soon), or **Minor** (localized improvement with limited impact).
+- Add **Now**, **Next**, or **Later** urgency only when the evidence supports a delivery recommendation.
+- Every issue names the affected area, mechanism, impact, concrete fix, and a validation question or test when one is possible.
+- Do not duplicate the same issue across personas unless the impact, evidence, or recommended fix is materially different. Put cross-cutting consequences in the synthesis.
+- Preserve strengths and state when evidence is insufficient. A short report with fewer defensible findings is better than a padded checklist.
+
 ---
 
 ## 📊 The Stakeholder

@@ -3,13 +3,26 @@
 ![Design AI Skills by Faris: two bilingual skills for design critique and persuasive thinking](assets/cover.svg)
 ![Design AI Skills by Faris Thumbnail](assets/thumbnail.svg)
 
-Two ready-to-use AI skills for people who design, present, and defend ideas. Use them with **Claude** or **Codex** in English or Arabic, with no coding required.
+Two focused AI skills for people who design, present, and defend ideas. Use them with **Claude**, **Codex**, Claude Code, Figma-oriented agents, or any assistant that loads `SKILL.md` files. English and Arabic are supported, with no coding required.
 
-[English](#english) | [العربية](#العربية) | [Version 0.9.0](CHANGELOG.md#090---2026-08-06)
+[English](#english) | [العربية](#العربية) | [Version 0.9.1](CHANGELOG.md#091---2026-09-02)
 
 ---
 
 ## English
+
+### What kind of skills are these?
+
+This is a small, opinionated toolkit rather than a large catalog:
+
+- **Evaluative**: `design-audit-panel` reviews existing design evidence and returns prioritized findings.
+- **Decision support**: `devils-advocate-and-convincer` tests an idea, then turns defensible responses into a pitch.
+
+Choose the first when something needs inspection. Choose the second when a decision or proposal needs pressure-testing.
+
+### Quick start
+
+Copy one complete skill folder into the skills directory used by your assistant, or install the repository through a compatible skills installer. Each folder is independently usable and must keep its `SKILL.md`, `agents/openai.yaml`, and any `references` together.
 
 ### Choose a skill
 
@@ -21,6 +34,13 @@ Two ready-to-use AI skills for people who design, present, and defend ideas. Use
 ### Install
 
 Download this repository, then install only the skill folder you want or install both.
+
+#### Portable installation
+
+- **Any `SKILL.md` consumer**: copy `design-audit-panel/` or `devils-advocate-and-convincer/` into its skills directory.
+- **Claude Code, Cursor, Codex, and compatible agents**: from the repository root, try `npx skills add . --list`, then install the selected skill or the full collection according to that tool's prompt.
+- **Claude Code plugin-compatible clients**: use the repository as a local plugin source when your client supports `.claude-plugin/plugin.json`; otherwise use the portable folder installation above.
+- **Figma-oriented agents**: provide a Figma link only when a connected Figma capability can inspect it. Otherwise attach screenshots or an exported description.
 
 #### Claude
 
@@ -70,7 +90,8 @@ Expected output: realistic objections grouped by risk, a direct response to each
 - Markdown works everywhere and is the default when file-generation tools are unavailable.
 - Word, PDF, Figma, and image handling depend on the tools connected to your Claude or Codex environment.
 - When a linked design cannot be opened, the skill asks for screenshots or a short description instead of pretending it saw the design.
-- The collection uses one shared version number. The current release is **v0.9.0**.
+- The repository includes optional package metadata for clients that support Claude-style local plugins; portable skill-folder installation remains the fallback.
+- The collection uses one shared version number. The current release is **v0.9.1**.
 
 ### Troubleshooting
 
@@ -86,6 +107,19 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 ## العربية
 
+### ما نوع هذه المهارات؟
+
+هذه مجموعة صغيرة ومحددة وليست دليلاً ضخماً:
+
+- **تقييمية**: تراجع `design-audit-panel` أدلة التصميم وتعيد نتائج مرتبة حسب الأولوية.
+- **دعم القرار**: تختبر `devils-advocate-and-convincer` الفكرة، ثم تحول الردود القابلة للدفاع إلى خطاب مقنع.
+
+اختر الأولى عندما تحتاج إلى فحص شيء موجود، والثانية عندما تحتاج إلى اختبار قرار أو مقترح قبل عرضه.
+
+### البدء السريع
+
+انسخ مجلد المهارة كاملاً إلى مجلد المهارات الذي تستخدمه أداتك، أو ثبّت المستودع عبر أداة متوافقة. كل مجلد مستقل ويجب أن يحتفظ بملفات `SKILL.md` و`agents/openai.yaml` ومجلد `references` إن وجد.
+
 مهارتان جاهزتان للاستخدام مع أدوات الذكاء الاصطناعي للمصممين وكل من يراجع الأفكار أو يقدمها أو يدافع عنها. تعملان مع **Claude** و**Codex** بالعربية أو الإنجليزية، ولا تحتاجان إلى خبرة برمجية.
 
 ### اختر المهارة المناسبة
@@ -98,6 +132,13 @@ Expected output: realistic objections grouped by risk, a direct response to each
 ### التثبيت
 
 نزّل المستودع، ثم ثبّت مجلد المهارة التي تريدها أو ثبّت المجلدين معاً.
+
+#### التثبيت المحمول
+
+- **أي أداة تدعم `SKILL.md`**: انسخ `design-audit-panel/` أو `devils-advocate-and-convincer/` إلى مجلد المهارات.
+- **Claude Code وCursor وCodex والأدوات المتوافقة**: من جذر المستودع جرّب `npx skills add . --list`، ثم ثبّت المهارة المطلوبة أو المجموعة كاملة وفقاً للأداة.
+- **العملاء الذين يدعمون إضافات Claude**: استخدم المستودع كمصدر إضافة محلي عندما يدعم العميل `.claude-plugin/plugin.json`، وإلا استخدم التثبيت المحمول للمجلد.
+- **الأدوات المتصلة بـFigma**: أرسل رابط Figma فقط عندما تتوفر قدرة متصلة لقراءته. وإلا أرفق لقطات شاشة أو وصفاً مصدراً.
 
 #### Claude
 
@@ -145,7 +186,8 @@ $devils-advocate-and-convincer
 - تعمل صيغة Markdown في كل البيئات، وهي البديل الافتراضي عندما لا تتوفر أدوات إنشاء الملفات.
 - يعتمد إنشاء Word أو PDF وفتح Figma والصور على الأدوات المتصلة ببيئة Claude أو Codex لديك.
 - إذا تعذر فتح رابط التصميم، تطلب المهارة صوراً أو وصفاً مختصراً بدلاً من ادعاء أنها شاهدت التصميم.
-- تستخدم المجموعة رقم إصدار واحداً مشتركاً. الإصدار الحالي هو **v0.9.0**.
+- يتضمن المستودع بيانات اختيارية للعملاء الذين يدعمون إضافات Claude المحلية، ويبقى تثبيت مجلد المهارة هو البديل المحمول.
+- تستخدم المجموعة رقم إصدار واحداً مشتركاً. الإصدار الحالي هو **v0.9.1**.
 
 ### حل المشكلات
 
@@ -168,6 +210,10 @@ This repository follows [Semantic Versioning](https://semver.org/):
 - **Major / رئيسي** (`1.0.0`, then `2.0.0`): stable milestones or breaking behavior changes.
 
 Release notes live in [`CHANGELOG.md`](CHANGELOG.md), and the current machine-readable version lives in [`VERSION`](VERSION).
+
+## Contributing / المساهمة
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the quality bar, focused change guidance, bilingual expectations, and validation command.
 
 ## License / الترخيص
 

@@ -9,6 +9,8 @@ Audit the provided design through selected expert perspectives, then combine the
 
 Read `references/personas.md` before writing a report. Use only the persona blocks selected for the audit and preserve each persona's five-section sequence.
 
+This is an **evaluative** skill. Review supplied evidence against the selected lens; do not generate a redesign or fill missing evidence with plausible assumptions.
+
 ## Perspectives
 
 | Perspective | Primary lens |
@@ -20,6 +22,22 @@ Read `references/personas.md` before writing a report. Use only the persona bloc
 | Accessibility Expert | WCAG 2.2 and inclusive design |
 | UI/UX Expert | Hierarchy, interaction, design systems, and information architecture |
 | Growth Marketing | Acquisition, activation, retention, referral, and revenue |
+
+## Finding contract
+
+Use this shape for every issue, warning, opportunity, and top priority:
+
+```text
+Severity: Critical | Major | Minor
+Evidence: Observed | Inferred | To verify
+Affected area: [screen, step, component, or requirement]
+Finding: [specific problem and its mechanism]
+Impact: [user, business, accessibility, or delivery consequence]
+Fix: [concrete change]
+Validation: [test, question, or evidence needed]
+```
+
+Do not force a field to sound certain. Use `To verify` when the supplied material cannot support a confirmed finding, and omit an impact category that does not apply.
 
 ## Language
 
@@ -40,6 +58,8 @@ Use the perspectives named by the user. If none are named:
 
 State the selected perspectives in one short line. Ask a selection question only when two plausible panels would produce materially different results and the user's goal does not resolve the choice.
 
+Before inspecting the work, establish the smallest useful context profile: product or feature, target audience, platform, lifecycle stage, and audit goal. Use the default core panel when those details do not justify a different panel.
+
 ### 2. Inspect the evidence
 
 Review every supplied screenshot, design file, link, flow, and written requirement before auditing.
@@ -48,6 +68,8 @@ Review every supplied screenshot, design file, link, flow, and written requireme
 - If a Figma or external link cannot be opened, say so and request screenshots or a concise description. Never imply that an inaccessible design was inspected.
 - View attached images directly when the environment supports them.
 - Distinguish observed evidence from inferred context. Label important assumptions.
+- Tag material claims as **Observed**, **Inferred**, or **To verify**. A finding based only on an inference cannot be presented as a confirmed failure.
+- Record the product type, audience, platform, and stage when known. Ask one compact context question only when the missing detail would change the panel or severity.
 
 Infer product type, audience, and stage when the evidence makes them reasonably clear. If a missing detail would change the audit materially, ask one compact question covering the product, audience, and stage. Do not request information that can be derived from the supplied material.
 
@@ -61,6 +83,8 @@ Read the relevant blocks in `references/personas.md`, adopt each lens, and produ
 - Separate confirmed accessibility failures from risks that require implementation or contrast inspection to verify.
 - Keep persona voices distinct without using insults, stereotypes, or theatrical filler.
 - Prefer a short, specific report over invented or repetitive findings.
+- Rate each finding as **Critical**, **Major**, or **Minor**, and include implementation urgency (**Now**, **Next**, or **Later**) when the context supports it.
+- Route each issue to its owning lens: usability and flow to Frustrated User, WCAG and assistive technology to Accessibility Expert, visual composition to UI/UX Expert, and copy clarity to the relevant evidence-based observation. Do not duplicate one issue across personas unless the impact or fix materially differs.
 
 ### 4. Synthesize the audit
 
@@ -71,6 +95,8 @@ Place an executive summary before the persona reports. Include:
 3. **Consolidated action plan**: immediate fixes, next iteration work, and validation steps combined across the selected perspectives.
 
 Do not rank cosmetic preferences above task blockers, accessibility barriers, data loss, broken flows, or misleading behavior.
+
+For every top issue, include the evidence label, affected area, severity, why it matters, a concrete fix, and a validation question or test. If evidence is insufficient, list the question under **To verify** instead of inventing a verdict.
 
 ### 5. Deliver in an available format
 
