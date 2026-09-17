@@ -14,6 +14,7 @@ This is a focused collection. A useful change should make one of the two skills 
 - Keep findings grounded in supplied evidence and label assumptions or verification needs.
 - Preserve the existing English and Arabic behavior and keep corresponding README guidance aligned.
 - Keep each skill independently installable with its `SKILL.md`, `agents/openai.yaml`, and references.
+- Keep `INSTALL.md` bilingual and synchronize its repository URLs, skill names, required-file list, and permission limits with the README.
 - Do not add claims, source material, or examples that require attribution without recording the source.
 
 ## Validate before opening a change

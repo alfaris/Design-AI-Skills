@@ -19,6 +19,13 @@ class ValidateSkillsTests(unittest.TestCase):
     def test_repository_passes(self) -> None:
         self.assertEqual(VALIDATOR.validate(SCRIPT.parent.parent), 0)
 
+    def test_installer_contains_installation_contract(self) -> None:
+        installer = SCRIPT.parent.parent / "INSTALL.md"
+        text = installer.read_text(encoding="utf-8")
+        for requirement in VALIDATOR.INSTALLER_REQUIREMENTS:
+            with self.subTest(requirement=requirement):
+                self.assertIn(requirement, text)
+
     def test_missing_description_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

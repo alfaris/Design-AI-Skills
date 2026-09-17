@@ -14,6 +14,16 @@ FRONTMATTER_PATTERN = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n", re.DOTALL)
 KEY_PATTERN = re.compile(r"^([A-Za-z][A-Za-z0-9_-]*):(?:\s|$)")
 LINK_PATTERN = re.compile(r"\[[^]]+\]\(([^)]+)\)")
 SKIP_DIRECTORIES = {".git", "assets", "scripts"}
+INSTALLER_REQUIREMENTS = (
+    "https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main",
+    "design-audit-panel",
+    "devils-advocate-and-convincer",
+    "SKILL.md",
+    "agents/openai.yaml",
+    "references/",
+    "file-writing permission",
+    "الوصول إلى الويب",
+)
 
 
 def parse_frontmatter(path: Path) -> tuple[dict[str, str], list[str]]:
@@ -96,6 +106,19 @@ def find_skill_directories(root: Path) -> list[Path]:
     )
 
 
+def validate_installer(root: Path) -> list[str]:
+    installer_path = root / "INSTALL.md"
+    if not installer_path.is_file():
+        return ["missing INSTALL.md"]
+
+    text = installer_path.read_text(encoding="utf-8")
+    return [
+        f"missing installer requirement: {requirement}"
+        for requirement in INSTALLER_REQUIREMENTS
+        if requirement not in text
+    ]
+
+
 def validate(root: Path) -> int:
     skill_dirs = find_skill_directories(root)
     if not skill_dirs:
@@ -103,6 +126,10 @@ def validate(root: Path) -> int:
         return 1
 
     errors_by_path: dict[Path, list[str]] = {}
+    installer_errors = validate_installer(root)
+    if installer_errors:
+        errors_by_path[root / "INSTALL.md"] = installer_errors
+
     names: dict[str, Path] = {}
     for skill_dir in skill_dirs:
         errors = validate_skill(skill_dir)

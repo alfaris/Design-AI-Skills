@@ -22,7 +22,7 @@ Choose the first when something needs inspection. Choose the second when a decis
 
 ### Quick start
 
-Copy one complete skill folder into the skills directory used by your assistant, or install the repository through a compatible skills installer. Each folder is independently usable and must keep its `SKILL.md`, `agents/openai.yaml`, and any `references` together.
+For the easiest installation, copy the [one-prompt installer](INSTALL.md) into an AI agent that can browse the web and write files. It asks which skill you want, fetches only the required files, and installs them into the agent's supported skills directory without a ZIP or full repository download. Each folder is independently usable and must keep its `SKILL.md`, `agents/openai.yaml`, and any `references` together.
 
 ### Choose a skill
 
@@ -33,7 +33,18 @@ Copy one complete skill folder into the skills directory used by your assistant,
 
 ### Install
 
-Download this repository, then install only the skill folder you want or install both.
+#### One-prompt installation (recommended)
+
+1. Open [`INSTALL.md`](INSTALL.md).
+2. Copy the prompt for your language into your AI agent.
+3. Choose `design-audit-panel`, `devils-advocate-and-convincer`, or both when the agent asks.
+4. Confirm the skills directory before the agent writes files.
+
+The agent must have web access and permission to create or update files. A prompt cannot bypass those permissions. If the agent is chat-only, it may use the skill for the current conversation but cannot install it persistently.
+
+#### Provider-specific installation
+
+Use the guidance below when your provider has a documented skills or plugin workflow. The portable folder method remains available when the one-prompt installer cannot access files.
 
 #### Portable installation
 
@@ -118,7 +129,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 ### البدء السريع
 
-انسخ مجلد المهارة كاملاً إلى مجلد المهارات الذي تستخدمه أداتك، أو ثبّت المستودع عبر أداة متوافقة. كل مجلد مستقل ويجب أن يحتفظ بملفات `SKILL.md` و`agents/openai.yaml` ومجلد `references` إن وجد.
+لأسهل تثبيت، انسخ [أمر التثبيت بأمر واحد](INSTALL.md) إلى وكيل ذكاء اصطناعي يستطيع تصفح الويب وكتابة الملفات. سيسألك عن المهارة المطلوبة، ويجلب الملفات اللازمة فقط، ويثبتها في مجلد المهارات الذي يدعمه الوكيل من دون ملف ZIP أو تنزيل المستودع كاملاً. كل مجلد مستقل ويجب أن يحتفظ بملفات `SKILL.md` و`agents/openai.yaml` ومجلد `references` إن وجد.
 
 مهارتان جاهزتان للاستخدام مع أدوات الذكاء الاصطناعي للمصممين وكل من يراجع الأفكار أو يقدمها أو يدافع عنها. تعملان مع **Claude** و**Codex** بالعربية أو الإنجليزية، ولا تحتاجان إلى خبرة برمجية.
 
@@ -131,7 +142,18 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 ### التثبيت
 
-نزّل المستودع، ثم ثبّت مجلد المهارة التي تريدها أو ثبّت المجلدين معاً.
+#### التثبيت بأمر واحد (موصى به)
+
+1. افتح [`INSTALL.md`](INSTALL.md).
+2. انسخ الأمر بلغتك إلى وكيل الذكاء الاصطناعي.
+3. اختر `design-audit-panel` أو `devils-advocate-and-convincer` أو المهارتين عندما يسألك الوكيل.
+4. أكّد مجلد المهارات قبل أن يكتب الوكيل الملفات.
+
+يحتاج الوكيل إلى الوصول إلى الويب وإذن إنشاء الملفات أو تحديثها. لا يمكن لأمر واحد تجاوز هذه الأذونات. إذا كان الوكيل نصياً فقط، فقد يستخدم المهارة في المحادثة الحالية لكنه لا يستطيع تثبيتها بشكل دائم.
+
+#### التثبيت الخاص بمقدم الخدمة
+
+استخدم الإرشادات التالية عندما يوفر مقدم الخدمة طريقة موثقة للمهارات أو الإضافات. وتبقى طريقة نسخ مجلد المهارة متاحة عندما لا يستطيع أمر التثبيت بأمر واحد الوصول إلى الملفات.
 
 #### التثبيت المحمول
 

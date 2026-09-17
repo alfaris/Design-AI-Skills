@@ -6,7 +6,10 @@ All notable changes to this collection are documented here. The format follows [
 
 ## [Unreleased] / غير منشور
 
-No changes yet. / لا توجد تغييرات بعد.
+- Added a bilingual one-prompt installer that fetches selected skills directly from GitHub without requiring a ZIP or full repository download.
+- The installer confirms the target skills directory, requests overwrite permission, and reports when web or file-writing access prevents persistent installation.
+- تمت إضافة أمر تثبيت ثنائي اللغة يجلب المهارات المختارة مباشرة من GitHub من دون الحاجة إلى ملف ZIP أو تنزيل المستودع كاملاً.
+- يؤكد أمر التثبيت مجلد المهارات المستهدف ويطلب الإذن بالاستبدال، ويبلغ المستخدم عندما يمنع الوصول إلى الويب أو الكتابة التثبيت الدائم.
 
 ## [0.9.1] - 2026-09-02
 
