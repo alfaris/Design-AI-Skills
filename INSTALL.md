@@ -9,8 +9,8 @@ A prompt cannot bypass an agent's security permissions. If the agent cannot brow
 ```text
 Install skills from the Design AI Skills by Faris collection.
 
-Repository: https://github.com/alfaris/Design-AI-Skills-by-Faris
-Raw file base: https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main
+Repository: https://github.com/alfaris/Design-AI-Skills
+Raw file base: https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main
 
 First, ask me to choose one option:
 1. design-audit-panel
@@ -29,11 +29,11 @@ After confirmation, fetch only the complete folder(s) selected above from the re
 - every file in references/, when that directory exists
 
 Use these raw URLs:
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/design-audit-panel/SKILL.md
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/design-audit-panel/agents/openai.yaml
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/design-audit-panel/references/personas.md
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/devils-advocate-and-convincer/SKILL.md
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/devils-advocate-and-convincer/agents/openai.yaml
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/SKILL.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/agents/openai.yaml
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/references/personas.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/devils-advocate-and-convincer/SKILL.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/devils-advocate-and-convincer/agents/openai.yaml
 
 Before replacing any existing file, show the path and ask for permission. Never overwrite an existing skill silently. Create missing directories as needed, while preserving unrelated files.
 
@@ -52,8 +52,8 @@ Do not download a ZIP, clone the full repository, or report success until the fi
 ```text
 ثبّت مهارات Design AI Skills by Faris في هذا الوكيل.
 
-المستودع: https://github.com/alfaris/Design-AI-Skills-by-Faris
-قاعدة الملفات الخام: https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main
+المستودع: https://github.com/alfaris/Design-AI-Skills
+قاعدة الملفات الخام: https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main
 
 ابدأ بسؤالي عن الخيار المطلوب:
 1. design-audit-panel
@@ -72,11 +72,11 @@ Do not download a ZIP, clone the full repository, or report success until the fi
 - كل ملف داخل references/ عندما يكون هذا المجلد موجوداً
 
 استخدم هذه الروابط الخام:
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/design-audit-panel/SKILL.md
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/design-audit-panel/agents/openai.yaml
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/design-audit-panel/references/personas.md
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/devils-advocate-and-convincer/SKILL.md
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main/devils-advocate-and-convincer/agents/openai.yaml
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/SKILL.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/agents/openai.yaml
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/references/personas.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/devils-advocate-and-convincer/SKILL.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/devils-advocate-and-convincer/agents/openai.yaml
 
 قبل استبدال أي ملف موجود، اعرض مساره واطلب الإذن. لا تستبدل مهارة موجودة بصمت. أنشئ المجلدات الناقصة عند الحاجة مع الحفاظ على الملفات الأخرى غير المرتبطة.
 

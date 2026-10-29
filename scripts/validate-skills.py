@@ -15,7 +15,7 @@ KEY_PATTERN = re.compile(r"^([A-Za-z][A-Za-z0-9_-]*):(?:\s|$)")
 LINK_PATTERN = re.compile(r"\[[^]]+\]\(([^)]+)\)")
 SKIP_DIRECTORIES = {".git", "assets", "scripts"}
 INSTALLER_REQUIREMENTS = (
-    "https://raw.githubusercontent.com/alfaris/Design-AI-Skills-by-Faris/main",
+    "https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main",
     "design-audit-panel",
     "devils-advocate-and-convincer",
     "SKILL.md",
