@@ -10,6 +10,8 @@ All notable changes to this collection are documented here. The format follows [
 - The installer confirms the target skills directory, requests overwrite permission, and reports when web or file-writing access prevents persistent installation.
 - تمت إضافة أمر تثبيت ثنائي اللغة يجلب المهارات المختارة مباشرة من GitHub من دون الحاجة إلى ملف ZIP أو تنزيل المستودع كاملاً.
 - يؤكد أمر التثبيت مجلد المهارات المستهدف ويطلب الإذن بالاستبدال، ويبلغ المستخدم عندما يمنع الوصول إلى الويب أو الكتابة التثبيت الدائم.
+- Updated the installer, validator, and changelog links to the repository's current name, `alfaris/Design-AI-Skills`. The old `Design-AI-Skills-by-Faris` URLs still redirect, but the installer no longer depends on that redirect.
+- تم تحديث روابط أمر التثبيت وأداة التحقق وسجل التغييرات إلى الاسم الحالي للمستودع `alfaris/Design-AI-Skills`. ما زالت روابط `Design-AI-Skills-by-Faris` القديمة تُحوَّل تلقائياً، لكن أمر التثبيت لم يعد يعتمد على هذا التحويل.
 
 ## [0.9.1] - 2026-09-02
 
@@ -39,6 +41,6 @@ All notable changes to this collection are documented here. The format follows [
 - Clarified missing-context, inaccessible-design, mobile-layout, and output fallback behavior.
 - Replaced the oversized thumbnail with a lightweight, accessible SVG.
 
-[Unreleased]: https://github.com/alfaris/Design-AI-Skills-by-Faris/compare/v0.9.1...HEAD
-[0.9.1]: https://github.com/alfaris/Design-AI-Skills-by-Faris/releases/tag/v0.9.1
-[0.9.0]: https://github.com/alfaris/Design-AI-Skills-by-Faris/releases/tag/v0.9.0
+[Unreleased]: https://github.com/alfaris/Design-AI-Skills/compare/v0.9.1...HEAD
+[0.9.1]: https://github.com/alfaris/Design-AI-Skills/releases/tag/v0.9.1
+[0.9.0]: https://github.com/alfaris/Design-AI-Skills/releases/tag/v0.9.0
