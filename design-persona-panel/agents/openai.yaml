@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Persona Panel"
+  short_description: "Audit, debate, prioritize, or walk through designs with expert personas"
+  default_prompt: "Use $design-persona-panel to audit this design and prioritize the most important fixes."

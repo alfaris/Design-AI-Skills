@@ -15,7 +15,7 @@ Two focused AI skills for people who design, present, and defend ideas. Use them
 
 This is a small, opinionated toolkit rather than a large catalog:
 
-- **Evaluative**: `design-audit-panel` reviews existing design evidence and returns prioritized findings.
+- **Evaluative**: `design-persona-panel` reviews existing design evidence through expert personas in one of four workflows: Audit, Debate, Roundtable, or Walkthrough.
 - **Decision support**: `devils-advocate-and-convincer` tests an idea, then turns defensible responses into a pitch.
 
 Choose the first when something needs inspection. Choose the second when a decision or proposal needs pressure-testing.
@@ -28,7 +28,7 @@ For the easiest installation, copy the [one-prompt installer](INSTALL.md) into a
 
 | Skill | Best for | What you receive |
 | --- | --- | --- |
-| [`design-audit-panel`](design-audit-panel/) | Reviewing a screen, flow, product concept, or feature before building or shipping | An executive summary and prioritized reports from up to seven expert perspectives |
+| [`design-persona-panel`](design-persona-panel/) | Reviewing, debating, prioritizing, or walking through a screen, flow, product concept, or feature before building or shipping | Prioritized audit reports, a debate with a moderator verdict, an agreed priority list, or a step-by-step walkthrough, from up to seven expert personas |
 | [`devils-advocate-and-convincer`](devils-advocate-and-convincer/) | Pressure-testing an idea before a pitch, proposal, negotiation, or difficult conversation | Specific objections, persuasive responses, and a presentation-ready narrative |
 
 ### Install
@@ -37,7 +37,7 @@ For the easiest installation, copy the [one-prompt installer](INSTALL.md) into a
 
 1. Open [`INSTALL.md`](INSTALL.md).
 2. Copy the prompt for your language into your AI agent.
-3. Choose `design-audit-panel`, `devils-advocate-and-convincer`, or both when the agent asks.
+3. Choose `design-persona-panel`, `devils-advocate-and-convincer`, or both when the agent asks.
 4. Confirm the skills directory before the agent writes files.
 
 The agent must have web access and permission to create or update files. A prompt cannot bypass those permissions. If the agent is chat-only, it may use the skill for the current conversation but cannot install it persistently.
@@ -48,7 +48,7 @@ Use the guidance below when your provider has a documented skills or plugin work
 
 #### Portable installation
 
-- **Any `SKILL.md` consumer**: copy `design-audit-panel/` or `devils-advocate-and-convincer/` into its skills directory.
+- **Any `SKILL.md` consumer**: copy `design-persona-panel/` or `devils-advocate-and-convincer/` into its skills directory.
 - **Claude Code, Cursor, Codex, and compatible agents**: from the repository root, try `npx skills add . --list`, then install the selected skill or the full collection according to that tool's prompt.
 - **Claude Code plugin-compatible clients**: use the repository as a local plugin source when your client supports `.claude-plugin/plugin.json`; otherwise use the portable folder installation above.
 - **Figma-oriented agents**: provide a Figma link only when a connected Figma capability can inspect it. Otherwise attach screenshots or an exported description.
@@ -66,7 +66,7 @@ See Anthropic's current [custom skill instructions](https://support.claude.com/e
 
 1. Copy each complete skill folder into `.agents/skills/` inside a repository for project use, or into `$HOME/.agents/skills/` for personal use everywhere.
 2. Start or restart Codex if the new skill does not appear automatically.
-3. Type `$design-audit-panel` or `$devils-advocate-and-convincer` in your prompt. You can also run `/skills` in Codex CLI or the IDE extension to find installed skills.
+3. Type `$design-persona-panel` or `$devils-advocate-and-convincer` in your prompt. You can also run `/skills` in Codex CLI or the IDE extension to find installed skills.
 
 The Codex paths and invocation syntax follow the current [official OpenAI skill guidance](https://developers.openai.com/codex/skills/).
 
@@ -75,13 +75,37 @@ The Codex paths and invocation syntax follow the current [official OpenAI skill 
 **Design audit**
 
 ```text
-$design-audit-panel
+$design-persona-panel
 Audit this checkout flow for first-time mobile shoppers: [attach screenshots or add a Figma link].
 Use the Frustrated User, Accessibility, and UI/UX perspectives.
 Return the result in Markdown.
 ```
 
 Expected output: a cross-perspective summary, ranked issues, a consolidated action plan, and one structured report per selected perspective.
+
+**Design debate**
+
+```text
+$design-persona-panel
+Debate: Stakeholder vs Frustrated User.
+Should we require account signup before checkout, or offer guest checkout? [attach screenshots]
+```
+
+Expected output: the motion, each persona's opening position, rebuttals, concessions, and a moderator verdict with conditions and a test that would settle the question.
+
+**Roundtable and walkthrough**
+
+```text
+$design-persona-panel
+Roundtable with Stakeholder, Developer, Frustrated User, and A11y Expert: what should we fix first before launch?
+```
+
+```text
+$design-persona-panel
+Walk through this 4-step onboarding flow screen by screen: [attach screenshots].
+```
+
+Expected output: one agreed, ranked priority list with a dissent log, or per-step notes from each persona with step verdicts and a journey heatmap.
 
 **Devil's Advocate + Convincer**
 
@@ -122,7 +146,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 هذه مجموعة صغيرة ومحددة وليست دليلاً ضخماً:
 
-- **تقييمية**: تراجع `design-audit-panel` أدلة التصميم وتعيد نتائج مرتبة حسب الأولوية.
+- **تقييمية**: تراجع `design-persona-panel` أدلة التصميم من خلال شخصيات خبيرة ضمن أحد أربعة أنماط عمل: التدقيق، أو المناظرة، أو الطاولة المستديرة، أو الجولة خطوة بخطوة.
 - **دعم القرار**: تختبر `devils-advocate-and-convincer` الفكرة، ثم تحول الردود القابلة للدفاع إلى خطاب مقنع.
 
 اختر الأولى عندما تحتاج إلى فحص شيء موجود، والثانية عندما تحتاج إلى اختبار قرار أو مقترح قبل عرضه.
@@ -137,7 +161,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 | المهارة | مناسبة لـ | النتيجة التي تحصل عليها |
 | --- | --- | --- |
-| [`design-audit-panel`](design-audit-panel/) | مراجعة شاشة أو رحلة مستخدم أو فكرة منتج أو ميزة قبل تنفيذها أو إطلاقها | ملخص تنفيذي وتقارير مرتبة حسب الأولوية من سبع وجهات نظر متخصصة كحد أقصى |
+| [`design-persona-panel`](design-persona-panel/) | مراجعة شاشة أو رحلة مستخدم أو فكرة منتج أو ميزة أو مناظرتها أو ترتيب أولوياتها أو المرور عليها خطوة بخطوة قبل تنفيذها أو إطلاقها | تقارير تدقيق مرتبة، أو مناظرة بحكم محايد، أو قائمة أولويات متفق عليها، أو جولة خطوة بخطوة، من سبع شخصيات خبيرة كحد أقصى |
 | [`devils-advocate-and-convincer`](devils-advocate-and-convincer/) | اختبار الفكرة قبل عرض أو اقتراح أو تفاوض أو محادثة صعبة | اعتراضات واقعية وردود مقنعة وخطاب جاهز للتقديم |
 
 ### التثبيت
@@ -146,7 +170,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 1. افتح [`INSTALL.md`](INSTALL.md).
 2. انسخ الأمر بلغتك إلى وكيل الذكاء الاصطناعي.
-3. اختر `design-audit-panel` أو `devils-advocate-and-convincer` أو المهارتين عندما يسألك الوكيل.
+3. اختر `design-persona-panel` أو `devils-advocate-and-convincer` أو المهارتين عندما يسألك الوكيل.
 4. أكّد مجلد المهارات قبل أن يكتب الوكيل الملفات.
 
 يحتاج الوكيل إلى الوصول إلى الويب وإذن إنشاء الملفات أو تحديثها. لا يمكن لأمر واحد تجاوز هذه الأذونات. إذا كان الوكيل نصياً فقط، فقد يستخدم المهارة في المحادثة الحالية لكنه لا يستطيع تثبيتها بشكل دائم.
@@ -157,7 +181,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 #### التثبيت المحمول
 
-- **أي أداة تدعم `SKILL.md`**: انسخ `design-audit-panel/` أو `devils-advocate-and-convincer/` إلى مجلد المهارات.
+- **أي أداة تدعم `SKILL.md`**: انسخ `design-persona-panel/` أو `devils-advocate-and-convincer/` إلى مجلد المهارات.
 - **Claude Code وCursor وCodex والأدوات المتوافقة**: من جذر المستودع جرّب `npx skills add . --list`، ثم ثبّت المهارة المطلوبة أو المجموعة كاملة وفقاً للأداة.
 - **العملاء الذين يدعمون إضافات Claude**: استخدم المستودع كمصدر إضافة محلي عندما يدعم العميل `.claude-plugin/plugin.json`، وإلا استخدم التثبيت المحمول للمجلد.
 - **الأدوات المتصلة بـFigma**: أرسل رابط Figma فقط عندما تتوفر قدرة متصلة لقراءته. وإلا أرفق لقطات شاشة أو وصفاً مصدراً.
@@ -175,20 +199,44 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 1. انسخ مجلد كل مهارة كاملاً إلى `.agents/skills/` داخل المستودع لاستخدامها في مشروع محدد، أو إلى `$HOME/.agents/skills/` لاستخدامها في كل مشاريعك.
 2. أعد تشغيل Codex إذا لم تظهر المهارة تلقائياً.
-3. اكتب `$design-audit-panel` أو `$devils-advocate-and-convincer` في طلبك. ويمكنك استخدام `/skills` في Codex CLI أو إضافة IDE للعثور على المهارات المثبتة.
+3. اكتب `$design-persona-panel` أو `$devils-advocate-and-convincer` في طلبك. ويمكنك استخدام `/skills` في Codex CLI أو إضافة IDE للعثور على المهارات المثبتة.
 
 ### جرّب المهارات
 
 **تدقيق التصميم**
 
 ```text
-$design-audit-panel
+$design-persona-panel
 راجع رحلة الدفع هذه لمستخدم يشتري من الهاتف لأول مرة: [أرفق الصور أو رابط Figma].
 استخدم وجهات نظر المستخدم المحبط وخبير الوصول وخبير UI/UX.
 أعد النتيجة بصيغة Markdown.
 ```
 
 النتيجة المتوقعة: ملخص مشترك، مشكلات مرتبة حسب الأولوية، خطة عمل موحدة، وتقرير منظم لكل وجهة نظر اخترتها.
+
+**مناظرة التصميم**
+
+```text
+$design-persona-panel
+مناظرة: صاحب المصلحة ضد المستخدم المحبط.
+هل نطلب إنشاء حساب قبل الدفع أم نتيح الدفع كضيف؟ [أرفق الصور]
+```
+
+النتيجة المتوقعة: صياغة واضحة لموضوع المناظرة، وموقف افتتاحي لكل شخصية، وردود متبادلة، وتنازلات، وحكم محايد مع شروط واختبار يحسم المسألة.
+
+**الطاولة المستديرة والجولة خطوة بخطوة**
+
+```text
+$design-persona-panel
+طاولة مستديرة مع صاحب المصلحة والمطوّر والمستخدم المحبط وخبير الوصول: ما الذي نصلحه أولاً قبل الإطلاق؟
+```
+
+```text
+$design-persona-panel
+مرّ على رحلة الإعداد هذه المكونة من 4 خطوات شاشة بشاشة: [أرفق الصور].
+```
+
+النتيجة المتوقعة: قائمة أولويات واحدة متفق عليها مع سجل للاعتراضات المتبقية، أو ملاحظات كل شخصية في كل خطوة مع حكم لكل خطوة وخريطة حرارية للرحلة.
 
 **محامي الشيطان + الإقناع**
 

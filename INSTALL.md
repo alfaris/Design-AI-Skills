@@ -13,7 +13,7 @@ Repository: https://github.com/alfaris/Design-AI-Skills
 Raw file base: https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main
 
 First, ask me to choose one option:
-1. design-audit-panel
+1. design-persona-panel
 2. devils-advocate-and-convincer
 3. both skills
 
@@ -26,12 +26,16 @@ Before changing anything:
 After confirmation, fetch only the complete folder(s) selected above from the repository's raw files. Preserve each skill folder name and these files:
 - SKILL.md
 - agents/openai.yaml
-- every file in references/, when that directory exists
+- every file in references/ and its subfolders (such as references/workflows/), when that directory exists
 
 Use these raw URLs:
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/SKILL.md
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/agents/openai.yaml
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/references/personas.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/SKILL.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/agents/openai.yaml
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/personas.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/workflows/audit.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/workflows/debate.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/workflows/roundtable.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/workflows/walkthrough.md
 - https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/devils-advocate-and-convincer/SKILL.md
 - https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/devils-advocate-and-convincer/agents/openai.yaml
 
@@ -41,7 +45,7 @@ When finished, report:
 - whether installation completed or was blocked;
 - every file created, updated, or skipped;
 - the skills directory used;
-- how to invoke each installed skill in this agent, including $design-audit-panel and $devils-advocate-and-convincer when supported;
+- how to invoke each installed skill in this agent, including $design-persona-panel and $devils-advocate-and-convincer when supported;
 - whether the agent needs to be restarted or reloaded.
 
 Do not download a ZIP, clone the full repository, or report success until the files are actually present at the confirmed target path.
@@ -56,7 +60,7 @@ Do not download a ZIP, clone the full repository, or report success until the fi
 قاعدة الملفات الخام: https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main
 
 ابدأ بسؤالي عن الخيار المطلوب:
-1. design-audit-panel
+1. design-persona-panel
 2. devils-advocate-and-convincer
 3. المهارتان معاً
 
@@ -69,12 +73,16 @@ Do not download a ZIP, clone the full repository, or report success until the fi
 بعد التأكيد، اجلب المجلد أو المجلدات المختارة كاملة من الملفات الخام في المستودع. حافظ على اسم كل مجلد مهارة وعلى هذه الملفات:
 - SKILL.md
 - agents/openai.yaml
-- كل ملف داخل references/ عندما يكون هذا المجلد موجوداً
+- كل ملف داخل references/ ومجلداته الفرعية (مثل references/workflows/) عندما يكون هذا المجلد موجوداً
 
 استخدم هذه الروابط الخام:
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/SKILL.md
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/agents/openai.yaml
-- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-audit-panel/references/personas.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/SKILL.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/agents/openai.yaml
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/personas.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/workflows/audit.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/workflows/debate.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/workflows/roundtable.md
+- https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/design-persona-panel/references/workflows/walkthrough.md
 - https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/devils-advocate-and-convincer/SKILL.md
 - https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main/devils-advocate-and-convincer/agents/openai.yaml
 
@@ -84,7 +92,7 @@ Do not download a ZIP, clone the full repository, or report success until the fi
 - هل اكتمل التثبيت أم تعذر؛
 - كل ملف تم إنشاؤه أو تحديثه أو تخطيه؛
 - مجلد المهارات المستخدم؛
-- طريقة تشغيل كل مهارة مثبتة في هذا الوكيل، بما في ذلك $design-audit-panel و$devils-advocate-and-convincer عندما يدعمهما الوكيل؛
+- طريقة تشغيل كل مهارة مثبتة في هذا الوكيل، بما في ذلك $design-persona-panel و$devils-advocate-and-convincer عندما يدعمهما الوكيل؛
 - هل يحتاج الوكيل إلى إعادة تشغيل أو إعادة تحميل.
 
 لا تنزّل ملف ZIP ولا تستنسخ المستودع كاملاً، ولا تبلغ عن نجاح التثبيت قبل التأكد من وجود الملفات في المسار المستهدف المؤكد.

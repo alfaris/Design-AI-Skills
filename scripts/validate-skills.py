@@ -16,11 +16,12 @@ LINK_PATTERN = re.compile(r"\[[^]]+\]\(([^)]+)\)")
 SKIP_DIRECTORIES = {".git", "assets", "scripts"}
 INSTALLER_REQUIREMENTS = (
     "https://raw.githubusercontent.com/alfaris/Design-AI-Skills/main",
-    "design-audit-panel",
+    "design-persona-panel",
     "devils-advocate-and-convincer",
     "SKILL.md",
     "agents/openai.yaml",
     "references/",
+    "references/workflows/",
     "file-writing permission",
     "الوصول إلى الويب",
 )
