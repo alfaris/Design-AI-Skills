@@ -6,8 +6,8 @@ All notable changes to this collection are documented here. The format follows [
 
 ## [Unreleased] / غير منشور
 
-- Made the repository an installable Claude Code plugin marketplace: added `.claude-plugin/marketplace.json` and pointed `plugin.json` at both skill folders, so `/plugin install design-ai-skills-by-faris@design-ai-skills` loads the skills.
-- أصبح المستودع سوق إضافات قابلاً للتثبيت في Claude Code: تمت إضافة `.claude-plugin/marketplace.json` وربط `plugin.json` بمجلدي المهارتين، فيحمّل الأمر `/plugin install design-ai-skills-by-faris@design-ai-skills` المهارتين.
+- Made the repository an installable Claude Code plugin marketplace: added `.claude-plugin/marketplace.json` and pointed `plugin.json` at both skill folders, so `/plugin install das@design-ai-skills` loads the skills. The plugin is named `das` (Design AI Skills) to keep skill commands short: `/das:design-persona-panel` and `/das:devils-advocate-and-convincer`.
+- أصبح المستودع سوق إضافات قابلاً للتثبيت في Claude Code: تمت إضافة `.claude-plugin/marketplace.json` وربط `plugin.json` بمجلدي المهارتين، فيحمّل الأمر `/plugin install das@design-ai-skills` المهارتين. اسم الإضافة `das` (اختصار Design AI Skills) لتبقى أوامر المهارات قصيرة: `/das:design-persona-panel` و`/das:devils-advocate-and-convincer`.
 - **Breaking:** renamed `design-audit-panel` to `design-persona-panel`. Remove the old folder and reinstall; `$design-audit-panel` no longer exists.
 - Added four persona workflows: **Audit** (the previous behavior), **Debate** (personas argue a trade-off and a neutral moderator decides), **Roundtable** (personas agree on one ranked priority list with a dissent log), and **Walkthrough** (personas step through a flow screen by screen).
 - Split the persona definitions from the output formats: `references/personas.md` now describes each persona's lens, biases, what they fight for, and natural tensions, and each workflow's structure lives in `references/workflows/`.

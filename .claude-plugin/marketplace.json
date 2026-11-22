@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "design-ai-skills-by-faris",
+      "name": "das",
       "source": "./",
       "description": "Focused bilingual design review (persona audit, debate, roundtable, walkthrough) and decision-support skills for AI assistants."
     }

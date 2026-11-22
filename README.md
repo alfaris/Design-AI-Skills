@@ -50,7 +50,7 @@ Use the guidance below when your provider has a documented skills or plugin work
 
 - **Any `SKILL.md` consumer**: copy `design-persona-panel/` or `devils-advocate-and-convincer/` into its skills directory.
 - **Claude Code, Cursor, Codex, and compatible agents**: from the repository root, try `npx skills add . --list`, then install the selected skill or the full collection according to that tool's prompt.
-- **Claude Code plugin**: install both skills as one plugin from this repository's marketplace. In a terminal run `claude plugin marketplace add alfaris/Design-AI-Skills`, then `claude plugin install design-ai-skills-by-faris@design-ai-skills`. Inside a Claude Code session, use `/plugin marketplace add alfaris/Design-AI-Skills` and `/plugin install design-ai-skills-by-faris@design-ai-skills`. Run `claude plugin update design-ai-skills-by-faris` to get new releases.
+- **Claude Code plugin**: install both skills as one plugin from this repository's marketplace. In a terminal run `claude plugin marketplace add alfaris/Design-AI-Skills`, then `claude plugin install das@design-ai-skills`. Inside a Claude Code session, use `/plugin marketplace add alfaris/Design-AI-Skills` and `/plugin install das@design-ai-skills`. Run `claude plugin update das` to get new releases. Call the skills with `/das:design-persona-panel` and `/das:devils-advocate-and-convincer`, or describe the task and let Claude pick the skill.
 - **Figma-oriented agents**: provide a Figma link only when a connected Figma capability can inspect it. Otherwise attach screenshots or an exported description.
 
 #### Claude
@@ -183,7 +183,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 - **أي أداة تدعم `SKILL.md`**: انسخ `design-persona-panel/` أو `devils-advocate-and-convincer/` إلى مجلد المهارات.
 - **Claude Code وCursor وCodex والأدوات المتوافقة**: من جذر المستودع جرّب `npx skills add . --list`، ثم ثبّت المهارة المطلوبة أو المجموعة كاملة وفقاً للأداة.
-- **إضافة Claude Code**: ثبّت المهارتين كإضافة واحدة من سوق الإضافات في هذا المستودع. في الطرفية شغّل `claude plugin marketplace add alfaris/Design-AI-Skills` ثم `claude plugin install design-ai-skills-by-faris@design-ai-skills`. وداخل جلسة Claude Code استخدم `/plugin marketplace add alfaris/Design-AI-Skills` ثم `/plugin install design-ai-skills-by-faris@design-ai-skills`. شغّل `claude plugin update design-ai-skills-by-faris` للحصول على الإصدارات الجديدة.
+- **إضافة Claude Code**: ثبّت المهارتين كإضافة واحدة من سوق الإضافات في هذا المستودع. في الطرفية شغّل `claude plugin marketplace add alfaris/Design-AI-Skills` ثم `claude plugin install das@design-ai-skills`. وداخل جلسة Claude Code استخدم `/plugin marketplace add alfaris/Design-AI-Skills` ثم `/plugin install das@design-ai-skills`. شغّل `claude plugin update das` للحصول على الإصدارات الجديدة. استدعِ المهارتين بالأمرين `/das:design-persona-panel` و`/das:devils-advocate-and-convincer`، أو صف المهمة ودع Claude يختار المهارة.
 - **الأدوات المتصلة بـFigma**: أرسل رابط Figma فقط عندما تتوفر قدرة متصلة لقراءته. وإلا أرفق لقطات شاشة أو وصفاً مصدراً.
 
 #### Claude
