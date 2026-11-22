@@ -26,8 +26,10 @@ For each step:
 
 - **Step verdict:**
   - **Blocker:** a Critical issue whose effect on completing the step is Observed. Either the design leaves no way forward, or supplied metrics show most users fail at this step.
-  - **Friction:** any Observed Major issue, or a Critical issue whose blocking effect is Inferred or To verify (for example, an Observed contrast failure whose effect on completion is not measured).
+  - **Friction:** any Major issue, or a Critical issue whose blocking effect is Inferred or To verify (for example, an Observed contrast failure whose effect on completion is not measured).
   - **Pass:** only Minor issues, or none.
+
+  When a Friction verdict rests only on Inferred or To verify issues, write it as **Friction (to verify)** and list the question that would confirm it under **To verify**. Severity and evidence stay independent: an unconfirmed Major issue is still Major.
 
 Carry context forward. Personas notice problems that come from earlier steps, such as re-entered data, lost state, or broken promises from a previous screen. Write a cross-step issue once, at the step where users feel it, and name the step where it originates. List it once in Top Fixes.
 
