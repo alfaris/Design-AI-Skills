@@ -5,5 +5,9 @@
   "author": {
     "name": "Ahmed Faris",
     "url": "https://afaris.me"
-  }
+  },
+  "skills": [
+    "./design-persona-panel/",
+    "./devils-advocate-and-convincer/"
+  ]
 }

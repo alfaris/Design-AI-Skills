@@ -1,0 +1,15 @@
+{
+  "name": "design-ai-skills",
+  "description": "Bilingual (English/Arabic) design review and decision-support skills by Ahmed Faris.",
+  "owner": {
+    "name": "Ahmed Faris",
+    "url": "https://afaris.me"
+  },
+  "plugins": [
+    {
+      "name": "design-ai-skills-by-faris",
+      "source": "./",
+      "description": "Focused bilingual design review (persona audit, debate, roundtable, walkthrough) and decision-support skills for AI assistants."
+    }
+  ]
+}

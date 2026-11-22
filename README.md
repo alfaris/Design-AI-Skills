@@ -50,7 +50,7 @@ Use the guidance below when your provider has a documented skills or plugin work
 
 - **Any `SKILL.md` consumer**: copy `design-persona-panel/` or `devils-advocate-and-convincer/` into its skills directory.
 - **Claude Code, Cursor, Codex, and compatible agents**: from the repository root, try `npx skills add . --list`, then install the selected skill or the full collection according to that tool's prompt.
-- **Claude Code plugin-compatible clients**: use the repository as a local plugin source when your client supports `.claude-plugin/plugin.json`; otherwise use the portable folder installation above.
+- **Claude Code plugin**: install both skills as one plugin from this repository's marketplace. In a terminal run `claude plugin marketplace add alfaris/Design-AI-Skills`, then `claude plugin install design-ai-skills-by-faris@design-ai-skills`. Inside a Claude Code session, use `/plugin marketplace add alfaris/Design-AI-Skills` and `/plugin install design-ai-skills-by-faris@design-ai-skills`. Run `claude plugin update design-ai-skills-by-faris` to get new releases.
 - **Figma-oriented agents**: provide a Figma link only when a connected Figma capability can inspect it. Otherwise attach screenshots or an exported description.
 
 #### Claude
@@ -125,7 +125,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 - Markdown works everywhere and is the default when file-generation tools are unavailable.
 - Word, PDF, Figma, and image handling depend on the tools connected to your Claude or Codex environment.
 - When a linked design cannot be opened, the skill asks for screenshots or a short description instead of pretending it saw the design.
-- The repository includes optional package metadata for clients that support Claude-style local plugins; portable skill-folder installation remains the fallback.
+- The repository is also a Claude Code plugin marketplace (`.claude-plugin/marketplace.json`); portable skill-folder installation remains the fallback for other tools.
 - The collection uses one shared version number. The current release is **v0.9.1**.
 
 ### Troubleshooting
@@ -183,7 +183,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 
 - **أي أداة تدعم `SKILL.md`**: انسخ `design-persona-panel/` أو `devils-advocate-and-convincer/` إلى مجلد المهارات.
 - **Claude Code وCursor وCodex والأدوات المتوافقة**: من جذر المستودع جرّب `npx skills add . --list`، ثم ثبّت المهارة المطلوبة أو المجموعة كاملة وفقاً للأداة.
-- **العملاء الذين يدعمون إضافات Claude**: استخدم المستودع كمصدر إضافة محلي عندما يدعم العميل `.claude-plugin/plugin.json`، وإلا استخدم التثبيت المحمول للمجلد.
+- **إضافة Claude Code**: ثبّت المهارتين كإضافة واحدة من سوق الإضافات في هذا المستودع. في الطرفية شغّل `claude plugin marketplace add alfaris/Design-AI-Skills` ثم `claude plugin install design-ai-skills-by-faris@design-ai-skills`. وداخل جلسة Claude Code استخدم `/plugin marketplace add alfaris/Design-AI-Skills` ثم `/plugin install design-ai-skills-by-faris@design-ai-skills`. شغّل `claude plugin update design-ai-skills-by-faris` للحصول على الإصدارات الجديدة.
 - **الأدوات المتصلة بـFigma**: أرسل رابط Figma فقط عندما تتوفر قدرة متصلة لقراءته. وإلا أرفق لقطات شاشة أو وصفاً مصدراً.
 
 #### Claude
@@ -256,7 +256,7 @@ $devils-advocate-and-convincer
 - تعمل صيغة Markdown في كل البيئات، وهي البديل الافتراضي عندما لا تتوفر أدوات إنشاء الملفات.
 - يعتمد إنشاء Word أو PDF وفتح Figma والصور على الأدوات المتصلة ببيئة Claude أو Codex لديك.
 - إذا تعذر فتح رابط التصميم، تطلب المهارة صوراً أو وصفاً مختصراً بدلاً من ادعاء أنها شاهدت التصميم.
-- يتضمن المستودع بيانات اختيارية للعملاء الذين يدعمون إضافات Claude المحلية، ويبقى تثبيت مجلد المهارة هو البديل المحمول.
+- المستودع أيضاً سوق إضافات لـClaude Code (`.claude-plugin/marketplace.json`)، ويبقى تثبيت مجلد المهارة هو البديل المحمول للأدوات الأخرى.
 - تستخدم المجموعة رقم إصدار واحداً مشتركاً. الإصدار الحالي هو **v0.9.1**.
 
 ### حل المشكلات
