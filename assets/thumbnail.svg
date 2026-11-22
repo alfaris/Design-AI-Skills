@@ -16,8 +16,8 @@
       <rect width="10" height="268" rx="5" fill="#38BDF8"/>
       <circle cx="68" cy="62" r="26" fill="#0C4A6E"/>
       <path d="M56 62L64 70L81 53" stroke="#7DD3FC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="112" y="57" fill="#F9FAFB" font-size="28" font-weight="750">Design Audit Panel</text>
-      <text x="112" y="86" fill="#9CA3AF" font-size="18" font-weight="500">Seven expert perspectives</text>
+      <text x="112" y="57" fill="#F9FAFB" font-size="28" font-weight="750">Design Persona Panel</text>
+      <text x="112" y="86" fill="#9CA3AF" font-size="18" font-weight="500">Seven personas, four workflows</text>
 
       <text x="40" y="142" fill="#D1D5DB" font-size="20">Find friction, accessibility risks,</text>
       <text x="40" y="174" fill="#D1D5DB" font-size="20">business gaps, and the next best fix.</text>

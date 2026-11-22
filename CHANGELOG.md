@@ -6,6 +6,12 @@ All notable changes to this collection are documented here. The format follows [
 
 ## [Unreleased] / غير منشور
 
+- **Breaking:** renamed `design-audit-panel` to `design-persona-panel`. Remove the old folder and reinstall; `$design-audit-panel` no longer exists.
+- Added four persona workflows: **Audit** (the previous behavior), **Debate** (personas argue a trade-off and a neutral moderator decides), **Roundtable** (personas agree on one ranked priority list with a dissent log), and **Walkthrough** (personas step through a flow screen by screen).
+- Split the persona definitions from the output formats: `references/personas.md` now describes each persona's lens, biases, what they fight for, and natural tensions, and each workflow's structure lives in `references/workflows/`.
+- **تغيير جذري:** أُعيدت تسمية `design-audit-panel` إلى `design-persona-panel`. احذف المجلد القديم وأعد التثبيت، فالأمر `$design-audit-panel` لم يعد موجوداً.
+- تمت إضافة أربعة أنماط عمل للشخصيات: **التدقيق** (السلوك السابق)، و**المناظرة** (تتجادل الشخصيات حول مفاضلة ويحكم وسيط محايد)، و**الطاولة المستديرة** (تتفق الشخصيات على قائمة أولويات واحدة مع سجل للاعتراضات)، و**الجولة خطوة بخطوة** (تمر الشخصيات على الرحلة شاشة بشاشة).
+- تم فصل تعريف الشخصيات عن صيغ المخرجات: يصف `references/personas.md` الآن منظور كل شخصية وتحيزاتها وما تدافع عنه ونقاط التوتر الطبيعية بينها، بينما توجد بنية كل نمط عمل في `references/workflows/`.
 - Added a bilingual one-prompt installer that fetches selected skills directly from GitHub without requiring a ZIP or full repository download.
 - The installer confirms the target skills directory, requests overwrite permission, and reports when web or file-writing access prevents persistent installation.
 - تمت إضافة أمر تثبيت ثنائي اللغة يجلب المهارات المختارة مباشرة من GitHub من دون الحاجة إلى ملف ZIP أو تنزيل المستودع كاملاً.
