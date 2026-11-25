@@ -5,7 +5,7 @@
 
 Two focused AI skills for people who design, present, and defend ideas. Use them with **Claude**, **Codex**, Claude Code, Figma-oriented agents, or any assistant that loads `SKILL.md` files. English and Arabic are supported, with no coding required.
 
-[English](#english) | [العربية](#العربية) | [Version 0.9.1](CHANGELOG.md#091---2026-09-02)
+[English](#english) | [العربية](#العربية) | [Version 0.10.0](CHANGELOG.md#0100---2026-11-25)
 
 ---
 
@@ -126,7 +126,7 @@ Expected output: realistic objections grouped by risk, a direct response to each
 - Word, PDF, Figma, and image handling depend on the tools connected to your Claude or Codex environment.
 - When a linked design cannot be opened, the skill asks for screenshots or a short description instead of pretending it saw the design.
 - The repository includes optional package metadata for clients that support Claude-style local plugins; portable skill-folder installation remains the fallback.
-- The collection uses one shared version number. The current release is **v0.9.1**.
+- The collection uses one shared version number. The current release is **v0.10.0**.
 
 ### Troubleshooting
 
@@ -257,7 +257,7 @@ $devils-advocate-and-convincer
 - يعتمد إنشاء Word أو PDF وفتح Figma والصور على الأدوات المتصلة ببيئة Claude أو Codex لديك.
 - إذا تعذر فتح رابط التصميم، تطلب المهارة صوراً أو وصفاً مختصراً بدلاً من ادعاء أنها شاهدت التصميم.
 - يتضمن المستودع بيانات اختيارية للعملاء الذين يدعمون إضافات Claude المحلية، ويبقى تثبيت مجلد المهارة هو البديل المحمول.
-- تستخدم المجموعة رقم إصدار واحداً مشتركاً. الإصدار الحالي هو **v0.9.1**.
+- تستخدم المجموعة رقم إصدار واحداً مشتركاً. الإصدار الحالي هو **v0.10.0**.
 
 ### حل المشكلات
 
